@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper-card {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: 40px auto;
+            width: 77%;
+        }
+        
+        .card {
+            background: rgb(228, 219, 219);
+            border-radius: 3px;
+            box-shadow: 0 1px 1px transparent;
+            flex: 1;
+            margin: 8px;
+            padding: 30px;
+            position: relative;
+            text-align: center;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .card.popular {
+            margin-top: -10px;
+            margin-bottom: -10px;
+        }
+        
+        .card.popular .card-title h3 {
+            color: #978282;
+            font-size: 22px;
+        }
+        
+        .card.popular .card-price {
+            margin: 50px;
+        }
+        
+        .card.popular .card-price h1 {
+            color: #020203;
+            font-size: 60px;
+        }
+        
+        .card.popular .card-action button {
+            background-color: #fc0060;
+            border-radius: 80px;
+            color: #fff;
+            font-size: 17px;
+            margin-top: -15px;
+            padding: 15px;
+            height: 80px;
+        }
+        
+        .card.popular .card-action button:hover {
+            background-color: #9cfd00;
+            font-size: 23px;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-ribbon {
+            position: absolute;
+            overflow: hidden;
+            top: -10px;
+            left: -10px;
+            width: 114px;
+            height: 112px;
+        }
+        
+        .card-ribbon span {
+            position: absolute;
+            display: block;
+            width: 160px;
+            padding: 10px 0;
+            background-color: #3e09ff;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 13px;
+            text-transform: uppercase;
+            text-align: center;
+            left: -35px;
+            top: 25px;
+            transform: rotate(-45deg);
+        }
+        
+        .card-ribbon::before,
+        .card-ribbon::after {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            display: block;
+            border: 5px solid #2980b9;
+            border-top-color: transparent;
+            border-left-color: transparent;
+        }
+        
+        .card-ribbon::before {
+            top: 0;
+            right: 0;
+        }
+        
+        .card-ribbon::after {
+            bottom: 0;
+            left: 0;
+        }
+        
+        .card-title h3 {
+            color: rgba(0, 0, 0, 0.3);
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+        
+        .card-title h4 {
+            color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .card-price {
+            margin: 60px 0;
+        }
+        
+        .card-price h1 {
+            font-size: 46px;
+        }
+        
+        .card-price h1 sup {
+            font-size: 15px;
+            display: inline-block;
+            margin-left: -20px;
+            width: 10px;
+        }
+        
+        .card-price h1 small {
+            color: rgba(0, 0, 0, 0.3);
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        
+        .card-description ul {
+            display: block;
+            list-style: none;
+            margin: 60px 0;
+            padding: 0;
+        }
+        
+        .card-description li {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 19px;
+            font-weight: 10px;
+            margin: 0 0 15px;
+        }
+        
+        .card-description li::before {
+            font-family: FontAwesome;
+            content: "\f00c";
+            padding: 0 5px 0 0;
+            color: rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-action button {
+            background: rgb(243, 1, 102);
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            color: #ffffff;
+            cursor: pointer;
+            display: block;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 15px;
+            width: 100%;
+            height: 35px;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .card-action button:hover {
+            background-color: #62f500;
+            box-shadow: 0 2px 4px #cbd816;
+            color: #fff;
+            font-size: 17px;
+        }
+        
+        .card-action h2 {
+            color: rgb(104, 248, 8);
+        }
+    </style>
+</head>
+
+</head>
+
+
+
+<body>
+    <div class="wrapper-card">
+        <div class="card">
+            <div class="card-ribbon">
+                <span>most popular</span>
+            </div>
+            <div class="card-title">
+                <h3>Monthly</h3>
+                <h4>Membership Plane</h4>.</h4>
+            </div>
+
+
+            <div class="card-price">
+                <h1>
+                    <sup>$</sup> 10
+                    <small>monthly</small>
+                </h1>
+            </div>
+            <div class="card-description">
+                <ul>
+                    <li><u>Access All Themes And Plugins</u> </li>
+                    <li><u> 20 Download Daily</u></li>
+                    <li> <u>Frequent Updates</u> </li>
+                    <li> <u>Access to New Releases</u> </li>
+                    <li> <u>Unlimited Domain Usage</u> </li>
+                    <li> <u>Direct Download Links</u> </li>
+                    <li> <u>Standard Support</u> </li>
+                </ul>
+            </div>
+            <div class="card-action">
+                <button type="button">Join Now</button>
+                <h2>Hurry up!</h2>
+            </div>
+        </div>
+        <div class="card popular">
+
+            <div class="card-title">
+                <h3>Yearly</h3>
+                <h4>Membership Plane</h4>
+            </div>
+            <div class="card-price">
+                <h1>
+                    <sup>$</sup> 60
+                    <small>monthly</small>
+                </h1>
+            </div>
+            <div class="card-description">
+                <ul>
+                    <li><u>Access All Themes And Plugins</u> </li>
+                    <li><u> Unlimited Download Daily</u></li>
+                    <li> <u>Frequent Updates</u> </li>
+                    <li> <u>Access to New Releases</u> </li>
+                    <li> <u>Unlimited Domain Usage</u> </li>
+                    <li> <u>Direct Download Links</u> </li>
+                    <li> <u>Standard Support</u> </li>
+                </ul>
+            </div>
+            <div class="card-action">
+                <button type="button">Join Now</button>
+                <h2>Hurry up!</h2>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">
+                <h3>6 Months</h3>
+                <h4>Membership Plane</h4>
+            </div>
+            <div class="card-price">
+                <h1>
+                    <sup>$</sup>30
+                    <small> 6month</small>
+                </h1>
+            </div>
+            <div class="card-description">
+                <ul>
+                    <li><u>Access All Themes And Plugins</u> </li>
+                    <li><u> 3d Download Daily</u></li>
+                    <li> <u>Frequent Updates</u> </li>
+                    <li> <u>Access to New Releases</u> </li>
+                    <li> <u>Unlimited Domain Usage</u> </li>
+                    <li> <u>Direct Download Links</u> </li>
+                    <li> <u>Standard Support</u> </li>
+                </ul>
+            </div>
+            <div class="card-action">
+                <button type="button">Join Now</button>
+                <h2>Herry Up!</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
